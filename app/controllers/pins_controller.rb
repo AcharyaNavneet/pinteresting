@@ -7,7 +7,8 @@ class PinsController < ApplicationController
   # respond_to :html
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order ("created_at DESC")
+    # you can also add the limiting code to limit the number of pins viewed in the first page
      # respond_with(@pins)
   end
 
